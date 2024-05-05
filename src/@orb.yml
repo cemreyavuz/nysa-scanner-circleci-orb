@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Magical songs of enchantment
+  Scan your repository with triggers or on schedule and send the report to nysa app.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
