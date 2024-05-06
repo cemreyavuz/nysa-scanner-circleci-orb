@@ -16,9 +16,9 @@ parameters:
 steps:
   - run:
       environment:
-        PROJECT_ROOT: <<parameters.projectRoot>>
-        API_KEY: <<parameters.apiKey>>
-        PROJECT_EXTERNAL_ID: <<parameters.projectExternalId>>
-        SERVER_URL: <<parameters.serverUrl>>
+        PARAM_PROJECT_ROOT: <<parameters.projectRoot>>
+        PARAM_API_KEY: <<parameters.apiKey>>
+        PARAM_PROJECT_EXTERNAL_ID: <<parameters.projectExternalId>>
+        PARAM_SERVER_URL: <<parameters.serverUrl>>
       name: Scan and report
       command: <<include(scripts/scan-and-report.sh)>>
