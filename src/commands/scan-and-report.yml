@@ -1,0 +1,24 @@
+description: >
+  This command scans the repository and report it to nysa
+parameters:
+  projectRoot:
+    type: string
+    description: "project root"
+  apiKey:
+    type: string
+    description: "api key to use in API requests"
+  projectExternalId:
+    type: string
+    description: "external id of the project to write the report"
+  serverUrl:
+    type: string
+    description: "server URL"
+steps:
+  - run:
+      environment:
+        PROJECT_ROOT: <<parameters.projectRoot>>
+        API_KEY: <<parameters.apiKey>>
+        PROJECT_EXTERNAL_ID: <<parameters.projectExternalId>>
+        SERVER_URL: <<parameters.serverUrl>>
+      name: Scan and report
+      command: <<include(scripts/scan-and-report.sh)>>
